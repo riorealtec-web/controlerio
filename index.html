@@ -183,53 +183,15 @@ let DB = null;
 
 function seedDB(){
   return {
-    obras:[
-      {id:1,nome:"Edifício Aurora",cliente:"Construtora Lima",status:"ativo",orcamento:1850000,custoReal:1120000,fase:"Estrutura",progresso:58,faturamentoInicial:1850000},
-      {id:2,nome:"Galpão Industrial Norte",cliente:"LogiPark S.A.",status:"ativo",orcamento:920000,custoReal:880000,fase:"Acabamento",progresso:82,faturamentoInicial:920000},
-      {id:3,nome:"Residencial Vista Verde",cliente:"Incorp. Bela Vista",status:"pausado",orcamento:540000,custoReal:610000,fase:"Fundação",progresso:30,faturamentoInicial:540000},
-      {id:4,nome:"Reforma Sede Realtec",cliente:"Realtec Engenharia",status:"finalizado",orcamento:120000,custoReal:115000,fase:"Acabamento",progresso:100,faturamentoInicial:120000}
-    ],
-    estoque:[
-      {id:1,nome:"Cimento CP-II 50kg",unidade:"saco",qtd:42,minimo:50,obraId:1},
-      {id:2,nome:"Vergalhão 10mm",unidade:"barra",qtd:130,minimo:60,obraId:1},
-      {id:3,nome:"Tijolo Cerâmico",unidade:"milheiro",qtd:3,minimo:10,obraId:2},
-      {id:4,nome:"Areia Média",unidade:"m³",qtd:18,minimo:15,obraId:3},
-      {id:5,nome:"Tinta Acrílica Branca",unidade:"lata 18L",qtd:6,minimo:8,obraId:2}
-    ],
-    movimentos:[
-      {id:1,materialId:1,tipo:"saida",qtd:20,data:"2026-06-18",obraId:1},
-      {id2:1,materialId:3,tipo:"saida",qtd:15,data:"2026-06-19",obraId:2}
-    ],
-    colaboradores:[
-      {id:1,nome:"Carlos Mendes",funcao:"Pedreiro",tipoPagto:"diaria",valor:180,obraId:1},
-      {id:2,nome:"Roberto Alves",funcao:"Servente",tipoPagto:"diaria",valor:120,obraId:1},
-      {id:3,nome:"Marcos Souza",funcao:"Eletricista",tipoPagto:"hora",valor:35,obraId:2},
-      {id:4,nome:"Fernando Dias",funcao:"Encarregado",tipoPagto:"diaria",valor:220,obraId:3}
-    ],
-    presencas:[
-      {id:1,colabId:1,obraId:1,data:"2026-06-19",presente:true},
-      {id:2,colabId:2,obraId:1,data:"2026-06-19",presente:true},
-      {id:3,colabId:3,obraId:2,data:"2026-06-19",presente:false}
-    ],
-    diario:[
-      {id:1,obraId:1,fase:"Estrutura",data:"2026-06-19",texto:"Concretagem da laje do 3º pavimento concluída. Clima favorável.",fotos:[]},
-      {id:2,obraId:2,fase:"Acabamento",data:"2026-06-18",texto:"Pintura interna iniciada no setor B. Falta tinta acrílica branca.",fotos:[]}
-    ],
-    custosMensais:[
-      {mes:"Jan",previsto:180000,realizado:165000},
-      {mes:"Fev",previsto:210000,realizado:225000},
-      {mes:"Mar",previsto:195000,realizado:190000},
-      {mes:"Abr",previsto:230000,realizado:240000},
-      {mes:"Mai",previsto:250000,realizado:238000},
-      {mes:"Jun",previsto:260000,realizado:255000}
-    ],
-    lancamentosFin:[
-      {id:1,obraId:1,tipo:"locacao",descricao:"Locação de andaime metálico",valor:4500,data:"2026-06-10",status:null},
-      {id:2,obraId:2,tipo:"despesa",descricao:"Aluguel de betoneira",valor:1800,data:"2026-06-12",status:null},
-      {id:3,obraId:1,tipo:"a_receber",descricao:"Medição 3ª etapa - estrutura",valor:180000,data:"2026-06-15",status:"pendente"},
-      {id:4,obraId:2,tipo:"a_receber",descricao:"Medição acabamento - bloco B",valor:95000,data:"2026-06-05",status:"recebido",dataRecebimento:"2026-06-20"}
-    ],
-    nextId:{obras:5,estoque:6,colaboradores:5,diario:3,movimentos:3,presencas:4,lancamentosFin:5}
+    obras:[],
+    estoque:[],
+    movimentos:[],
+    colaboradores:[],
+    presencas:[],
+    diario:[],
+    custosMensais:[],
+    lancamentosFin:[],
+    nextId:{obras:1,estoque:1,colaboradores:1,diario:1,movimentos:1,presencas:1,lancamentosFin:1}
   };
 }
 
